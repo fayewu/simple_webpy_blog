@@ -1,0 +1,17 @@
+$def with (users)
+
+<ul>
+$for user in users:
+    <li id="$user.name">$user.passwd</li>
+</ul>
+
+<form action="login" method="post" accept-charset="utf-8">
+<p>
+Username:
+<input type="text" name="name"/>
+Password:
+<input type="text" name="passwd"/>
+<input type="submit" value="Login"/>
+</p>
+</form>
+

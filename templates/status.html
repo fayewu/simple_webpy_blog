@@ -1,0 +1,10 @@
+$def with(flag)
+
+$if flag == "login_false":
+	<p>login error, username or passwd error</p>	
+$elif flag == "login_true":
+	<p>login success!</p>
+$elif flag == "register_false":
+	<p>your username has existed!</p>
+$elif flag == "register_true":
+	<p>register success!</p>
