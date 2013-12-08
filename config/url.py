@@ -3,7 +3,7 @@
 
 path = "controllers."
 urls = (
-        "/", "Index",
+        "/", path + "index.Index",
         "/status/(.*)", path + "Status",
         "/login", path + "auth.Login",
         "/reset", path + "auth.Reset",

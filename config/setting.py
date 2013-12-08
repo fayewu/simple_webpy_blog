@@ -15,4 +15,5 @@ store = web.session.DBStore(db, "sessions")
 session = web.session.Session(app, store, initializer={'login': 0})
 web.config_session = session
 
-render = web.template.render("templates/", globals={'context':session})
+render_login = web.template.render("templates/", globals = {'context':session})
+render = web.template.render("templates/", globals = {'context':session})

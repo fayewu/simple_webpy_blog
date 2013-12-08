@@ -3,7 +3,7 @@
 
 import web
 
-from config.setting import render
+from config.setting import render_login
 
 def logged():
     if web.config_session.login == 1:
@@ -16,7 +16,7 @@ class Login:
         if logged():
             return web.seeother("/status/login_true") 
         else:
-            return render.login()
+            return render_login.login()
     def POST(self):
         user_data = web.input() 
         var = dict(username = user_data.username)

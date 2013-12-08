@@ -6,3 +6,4 @@ create table user (
 	passwd varchar(100) not NULL
 );
 insert into user(username, passwd) values("test", "test"); 
+
