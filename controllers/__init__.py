@@ -3,3 +3,4 @@
 
 import index
 import init
+import blog

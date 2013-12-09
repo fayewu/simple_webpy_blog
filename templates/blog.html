@@ -1,4 +1,4 @@
-$def with(blog_posts, render)
+$def with(article)
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,7 +9,7 @@ $def with(blog_posts, render)
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-    <title>fayewu's blog</title>
+    <title>$article.title</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
@@ -59,8 +59,11 @@ $def with(blog_posts, render)
           <div class="jumbotron">
             <h3>信任，理解，包容</h3>
           </div>
-          $for each in blog_posts:
-              $:render.summary(each)
+
+          <a href="$article.url" style = "font-size:30px">$article.title</a>
+          <br><br>
+          $:article.html
+
         </div><!--/span-->
 
       </div><!--/row-->
