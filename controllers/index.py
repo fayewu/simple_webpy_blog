@@ -3,8 +3,9 @@
 
 import web
 
+from controllers.init import blog_posts
 from config.setting import render
 
 class Index:
     def GET(self):
-        return render.index()
+        return render.index(blog_posts, render)
