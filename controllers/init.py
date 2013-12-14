@@ -19,7 +19,7 @@ class Articles(object):
         self.html = markdown.markdown(input_file.read())
 
 def init_list():
-    file_list = os.listdir("/home/faye/fayewu/my_blog/contents/")
+    file_list = os.listdir("contents/")
 
     for each in file_list:
             blog_posts.append(Articles(each)) 

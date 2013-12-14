@@ -13,7 +13,6 @@ from config.url import urls
 from controllers.init import init_list
 from controllers.init import blog_posts
 
+init_list()
+application = web.application(urls, globals(), autoreload = True).wsgifunc()
 
-if __name__ == "__main__":
-    init_list()
-    application = web.application(urls, globals()).wsgifunc()
