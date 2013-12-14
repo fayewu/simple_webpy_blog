@@ -16,4 +16,4 @@ from controllers.init import blog_posts
 
 if __name__ == "__main__":
     init_list()
-    app = web.application(urls, globals()).wsgifunc()
+    application = web.application(urls, globals()).wsgifunc()
