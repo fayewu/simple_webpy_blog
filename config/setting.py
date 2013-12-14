@@ -6,7 +6,7 @@ import web
 from url import urls
 
 web.config.debug = False
-app = web.application(urls, globals())
+app = web.application(urls, globals()).wsgifunc()
 
 db = web.database(dbn = "mysql", user = "faye", pw = "wufeishizhu.", 
         db = "web_test");
