@@ -6,10 +6,10 @@ import web
 from url import urls
 
 web.config.debug = False
-app = web.application(urls, globals()).wsgifunc()
+app = web.application(urls, globals())
 
 #web.config_session = session
 
 #render_login = web.template.render("templates/", globals = {'context':session})
-render = web.template.render("templates/", globals = {'context':session})
+render = web.template.render("templates/", globals = {})
 web.template.Template.globals['render'] = render
