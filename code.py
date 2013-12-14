@@ -2,7 +2,6 @@
 #-*- coding: utf-8 -*-
 
 import web
-import MySQLdb
 
 from controllers.index import Index
 from config.setting import app
