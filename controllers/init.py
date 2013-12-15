@@ -13,10 +13,7 @@ class Articles(object):
     def __init__(self, filename):
         self.name = filename.replace(".md", "");
         self.time, self.title = self.name.split("_") 
-        self.url = "/blog/" + self.time.replace("-", "/")
-        self.title_url = urllib.quote(self.title)
-        self.url += self.title_url
-#       self.url = "/blog/" + self.time.replace("-", "/") + "/" + self.title
+        self.url = "/blog/" + self.time.replace("-", "/") + "/" + self.title
         
         input_file = codecs.open(file_path + filename, mode = "r", 
                 encoding = "utf-8")
