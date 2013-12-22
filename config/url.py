@@ -4,5 +4,6 @@
 path = "controllers."
 urls = (
         "/", path + "index.Index",
-        "/blog/(.*)", path + "blog.Blog"
+        "/blog/(.*)", path + "blog.Blog",
+        "/contact", path + "blog.contact" 
         )
