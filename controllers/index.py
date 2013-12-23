@@ -13,3 +13,7 @@ class Index:
 class Contact:
     def GET(self):
         return render.contact()
+
+class Work:
+    def GET(self):
+        return render.work()
