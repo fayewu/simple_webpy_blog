@@ -6,9 +6,25 @@ import time
 import codecs
 import urllib
 import markdown
+from HTMLParser import HTMLParser
 
 blog_posts = []
 file_path = "contents/"
+
+class MyHTMLParser(HTMLParser):
+    def __init__(self):
+        HTMLParser.__init__(self)
+        self.is_para = False
+        self.para = u"" 
+    def handle_starttag(self, tag, attrs):
+        if tag == "p":
+            self.is_para = True
+    def handle_data(self, data):
+        if self.is_para:
+            self.para += data
+    def handle_endtag(self, tag):
+        if tag == "p":
+            self.is_para = False
 
 class Articles(object):
     def __init__(self, filename):
@@ -19,6 +35,9 @@ class Articles(object):
         
         input_file = codecs.open(file_path + filename, mode = "r", 
                 encoding = "utf-8")
+        parser = MyHTMLParser() 
+        parser.feed()
+        self.para = parser.para
         self.html = markdown.markdown(input_file.read(), ['codehilite'])
 
 def init_list():
