@@ -19,7 +19,7 @@ class Articles(object):
         
         input_file = codecs.open(file_path + filename, mode = "r", 
                 encoding = "utf-8")
-        self.html = markdown.markdown(input_file.read(), 'codehilite')
+        self.html = markdown.markdown(input_file.read(), ['codehilite'])
 
 def init_list():
     file_list = os.listdir(file_path)

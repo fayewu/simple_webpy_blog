@@ -17,7 +17,12 @@ $def with(article)
     <!-- Custom styles for this template -->
     <link href="/static/css/offcanvas.css" rel="stylesheet">
 
-    <link href="/static/css/vim.css" rel = "stylesheet">
+    <!-- my style-->
+    <link href="/static/css/my_style.css" rel="stylesheet">
+
+    <!-- synax highlight-->
+    <link href="/static/css/vim.css" rel="stylesheet">
+
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="{{ page.base_url }}docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
@@ -61,7 +66,7 @@ $def with(article)
             <h3>Trust me, I'm an engineer.</h3>
           </div>
 
-          <a href="$article.url" style = "font-size:30px">$article.title</a>
+          <a href="$article.url" style = "font-size:29px">$article.title</a>
           <br><br>
           $:article.html
 
