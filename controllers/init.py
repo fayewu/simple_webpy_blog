@@ -11,7 +11,7 @@ import markdown
 blog_posts = []
 file_path = "contents/"
 
-#class MyHTMLParser(HTMLParser):
+##class MyHTMLParser(HTMLParser):
 #    def __init__(self):
 #        HTMLParser.__init__(self)
 #        self.is_para = False
