@@ -36,6 +36,13 @@ class Articles(object):
         input_file = codecs.open(file_path + filename, mode = "r", 
                 encoding = "utf-8")
         self.html = markdown.markdown(input_file.read(), ['codehilite'])
+        loc = self.html.find(u"<!--more-->") + len(u"<!--more-->")
+        self.para = self.html[:loc]
+        self.para = self.para.replace(u"<!--more-->", 
+                u'''<p><a class="btn btn-default" href= "''' + 
+                self.url.decode("utf-8") + 
+                u'''" role="button">View details</a></p>''')
+
 #        parser = MyHTMLParser() 
 #        parser.feed(self.html)
 #        self.para = parser.para[0:200]
