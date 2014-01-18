@@ -12,16 +12,16 @@ $def with(blog_posts, render)
     <title>fayewu's blog</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/static/css/offcanvas.css" rel="stylesheet">
+    <link href="static/css/offcanvas.css" rel="stylesheet">
 
     <!-- my style-->
-    <link href="/static/css/my_style.css" rel="stylesheet">
+    <link href="static/css/my_style.css" rel="stylesheet">
 
     <!-- synax highlight-->
-    <link href="/static/css/vim.css" rel="stylesheet">
+    <link href="static/css/vim.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="{{ page.base_url }}docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -65,10 +65,9 @@ $def with(blog_posts, render)
           <div class="jumbotron">
             <h3>Trust me, I'm an engineer.</h3>
           </div>
-          <div class = "row">
-            $for each in blog_posts:
-                $:render.summary(each)
-          </div>
+          </br>
+          $for each in blog_posts:
+            $:render.summary(each)
         </div><!--/span-->
 
       </div><!--/row-->
