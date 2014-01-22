@@ -65,8 +65,14 @@ $def with(article)
           <div class="jumbotron">
             <h3>Trust me, I'm an engineer.</h3>
           </div>
+          </br>
 
-          <a href="$article.url">$article.title</a>
+          <h2><a class = "text-danger" href = "$article.url">$article.title</a></h2>
+          <div class="meta">
+            <p class="text-danger">
+              <span class="glyphicon glyphicon-time">$article.time</span>
+            </p>
+          </div>
           <br><br>
           $:article.html
 
