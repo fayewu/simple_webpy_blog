@@ -53,4 +53,14 @@ def init_list():
     for each in file_list:
             blog_posts.append(Articles(each)) 
 
-    blog_posts.sort(cmp = lambda x,y:cmp(x.ctime, y.ctime), reverse = True)
+    blog_posts.sort(cmp = time_cmp, reverse = True)
+
+def time_cmp(x, y):
+    x_int = int(x.time.replace("-", ""))
+    y_int = int(y.time.replace("-", ""))
+
+    if x_int == y_int:
+        return x.ctime - y.ctime
+    else:
+        return x_int - y_int
+
