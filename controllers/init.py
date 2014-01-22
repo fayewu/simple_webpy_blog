@@ -39,7 +39,7 @@ class Articles(object):
         loc = self.html.find(u"<!--more-->") + len(u"<!--more-->")
         self.para = self.html[:loc]
         self.para = self.para.replace(u"<!--more-->", 
-                u'''<p><a class="btn btn-default" href= "''' + 
+                u'''<p><a class="btn btn-danger" href= "''' + 
                 self.url.decode("utf-8") + 
                 u'''" role="button">View details</a></p>''')
 
