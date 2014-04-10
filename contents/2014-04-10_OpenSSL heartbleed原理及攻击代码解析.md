@@ -40,6 +40,8 @@
 
 那么我们来看python脚本攻击的代码， 代码如下，地址文章的最开始有。
 
+<!--more-->
+
     #!/usr/bin/python
     
     # Quick and dirty demonstration of CVE-2014-0160 by Jared Stafford (jspenguin@jspenguin.org)
